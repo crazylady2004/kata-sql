@@ -1,4 +1,4 @@
-SELECT DISTINCT(name_fr), COUNT(idperson)as idperson 
+SELECT COUNT(idperson) as nb_personne, idperson
 FROM `countries_people`
-INNER JOIN countries on countries.id = countries_people.idcountry
-GROUP BY idcountry;
+GROUP by idperson
+HAVING COUNT(idperson) > 1;
