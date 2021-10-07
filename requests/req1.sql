@@ -1,1 +1,1 @@
-select count(*) from ’people’
+select count(*) from people
